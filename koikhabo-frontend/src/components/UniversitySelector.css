@@ -1,0 +1,254 @@
+.university-selector {
+  margin-bottom: 1.5rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.selector-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.selector-container {
+  position: relative;
+  width: 100%;
+}
+
+.selector-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  box-sizing: border-box;
+}
+
+.selector-input:hover {
+  border-color: #667eea;
+}
+
+.selector-input.open {
+  border-color: #667eea;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: 0 2px 8px rgba(102, 126, 234, 0.1);
+}
+
+.selected-university {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.uni-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.uni-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+}
+
+.uni-main {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.uni-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.uni-short {
+  color: #667eea;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.uni-location {
+  color: #666;
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+  font-weight: 400;
+}
+
+.placeholder {
+  color: #999;
+  font-size: 1rem;
+}
+
+.dropdown-arrow {
+  color: #667eea;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+  flex-shrink: 0;
+}
+
+.dropdown-arrow.up {
+  transform: rotate(180deg);
+}
+
+.selector-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 2px solid #667eea;
+  border-top: none;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  max-height: 400px;
+  overflow: hidden;
+}
+
+.search-container {
+  padding: 1rem;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+}
+
+.universities-list {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.university-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.university-option:hover {
+  background: #f8f9fa;
+}
+
+.university-option:last-child {
+  border-bottom: none;
+}
+
+.university-option .uni-info {
+  flex: 1;
+}
+
+.no-results {
+  padding: 2rem;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Custom scrollbar for universities list */
+.universities-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.universities-list::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.universities-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 3px;
+}
+
+.universities-list::-webkit-scrollbar-thumb:hover {
+  background: #5a6fd8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .selector-input {
+    padding: 0.75rem;
+    min-height: 50px;
+  }
+  
+  .uni-name {
+    font-size: 0.9rem;
+  }
+  
+  .uni-short {
+    font-size: 0.8rem;
+  }
+  
+  .university-option {
+    padding: 0.75rem;
+  }
+  
+  .search-container {
+    padding: 0.75rem;
+  }
+  
+  .search-input {
+    padding: 0.6rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .selector-input {
+    padding: 0.6rem;
+    min-height: 45px;
+  }
+  
+  .uni-icon {
+    font-size: 1.2rem;
+  }
+  
+  .uni-name {
+    font-size: 0.85rem;
+  }
+  
+  .uni-short {
+    font-size: 0.75rem;
+  }
+  
+  .placeholder {
+    font-size: 0.9rem;
+  }
+  
+  .university-option {
+    padding: 0.6rem;
+  }
+  
+  .universities-list {
+    max-height: 250px;
+  }
+}

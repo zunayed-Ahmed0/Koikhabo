@@ -1,0 +1,410 @@
+.order-tracking-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.order-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.order-header {
+  margin-bottom: 2rem;
+}
+
+.back-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.back-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tracking-main {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.order-info-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.order-info-header h1 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 2.5rem;
+}
+
+.order-id {
+  background: #e3f2fd;
+  color: #1565C0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status-section {
+  margin-bottom: 3rem;
+}
+
+.current-status {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 12px;
+  border-left: 6px solid;
+}
+
+.status-icon {
+  font-size: 3rem;
+}
+
+.status-info h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.8rem;
+}
+
+.status-info p {
+  margin: 0;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.progress-timeline {
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.progress-timeline::before {
+  content: '';
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e1e5e9;
+  z-index: 1;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #e1e5e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #666;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-item.completed .timeline-icon {
+  background: #4CAF50;
+  color: white;
+}
+
+.timeline-content h3 {
+  margin: 0 0 0.25rem 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.order-details {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.details-section {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.details-section h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.restaurant-info h4 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.restaurant-info p {
+  margin: 0;
+  color: #666;
+}
+
+.order-items {
+  margin-bottom: 1rem;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e1e5e9;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.item-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.item-quantity {
+  background: #e3f2fd;
+  color: #1565C0;
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.item-price {
+  font-weight: 600;
+  color: #667eea;
+}
+
+.order-total {
+  text-align: right;
+  padding-top: 1rem;
+  border-top: 2px solid #e1e5e9;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.contact-info p,
+.payment-info p {
+  margin: 0.5rem 0;
+  color: #333;
+}
+
+.payment-status {
+  padding: 0.25rem 0.5rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-left: 0.5rem;
+}
+
+.payment-status.paid {
+  background: #e8f5e8;
+  color: #4CAF50;
+}
+
+.payment-status.pending {
+  background: #fff3e0;
+  color: #FF9800;
+}
+
+.payment-status.failed {
+  background: #ffebee;
+  color: #f44336;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.history-btn,
+.review-btn,
+.order-again-btn {
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.history-btn {
+  background: #667eea;
+  color: white;
+}
+
+.history-btn:hover {
+  background: #5a6fd8;
+  transform: translateY(-2px);
+}
+
+.review-btn {
+  background: #FF9800;
+  color: white;
+}
+
+.review-btn:hover {
+  background: #F57C00;
+  transform: translateY(-2px);
+}
+
+.order-again-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.order-again-btn:hover {
+  background: #45a049;
+  transform: translateY(-2px);
+}
+
+.loading-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  color: white;
+  text-align: center;
+}
+
+.loading-spinner {
+  font-size: 4rem;
+  animation: bounce 2s infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+.not-found {
+  text-align: center;
+  background: white;
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.not-found h2 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.history-link {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.history-link:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .order-tracking-container {
+    padding: 1rem;
+  }
+  
+  .tracking-main {
+    padding: 1rem;
+  }
+  
+  .current-status {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .progress-timeline::before {
+    left: 20px;
+  }
+  
+  .timeline-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  
+  .timeline-item {
+    gap: 0.5rem;
+  }
+  
+  .order-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .history-btn,
+  .review-btn,
+  .order-again-btn {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+  }
+}

@@ -1,0 +1,420 @@
+.restaurant-card {
+  background: rgb(151, 61, 61);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.restaurant-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.restaurant-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+  margin-top: 0.25rem;
+}
+
+.restaurant-title {
+  flex: 1;
+}
+
+.restaurant-title h3 {
+  margin: 0 0 0.5rem 0;
+  color: #a16767 !important;
+  font-size: 1.3rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.restaurant-rating {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.stars {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.star {
+  font-size: 0.9rem;
+}
+
+.star.full {
+  color: #ffd700;
+}
+
+.star.half {
+  color: #ffd700;
+  opacity: 0.7;
+}
+
+.star.empty {
+  color: #ddd;
+}
+
+.rating-text {
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.restaurant-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #666;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.restaurant-header h3 {
+  margin: 0;
+  color: #1f2937;
+  font-size: 1.25rem;
+}
+
+.restaurant-rating {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.restaurant-description {
+  color: #333333 !important;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.restaurant-address {
+  color: #555555 !important;
+  font-size: 0.875rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.availability-stats {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  color: #000000 !important;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #059669;
+  font-weight: 600;
+}
+
+.meal-availability {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.meal-stat {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.book-seat-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 1rem 0;
+}
+
+.book-seat-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.book-seat-btn.fully-booked {
+  background: #ef4444;
+  cursor: not-allowed;
+}
+
+.book-seat-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.restaurant-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.status-indicator {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.status-indicator.open {
+  color: #059669;
+}
+
+.status-indicator.closed {
+  color: #dc2626;
+}
+
+.hours {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .restaurant-card {
+    padding: 1rem;
+  }
+  
+  .restaurant-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .meal-availability {
+    grid-template-columns: 1fr;
+  }
+  
+}
+.restaurant-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #e5e7eb;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.restaurant-card.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 200px;
+  color: #666;
+}
+
+.restaurant-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.restaurant-header h3 {
+  margin: 0;
+  color: #000000 !important;
+  font-size: 1.25rem;
+}
+
+.restaurant-rating {
+  background: #fef3c7;
+  color: #92400e;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.restaurant-description {
+  color: #6b7280;
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+.restaurant-address {
+  color: #9ca3af;
+  font-size: 0.875rem;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.availability-stats {
+  background: #f9fafb;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.stat-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  
+}
+
+.stat-label {
+  color: #374151;
+  font-weight: 500;
+}
+
+.stat-value {
+  color: #059669;
+  font-weight: 600;
+}
+
+.meal-availability {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.meal-stat {
+  background: white;
+  padding: 0.5rem;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.book-seat-btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #10b981;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin: 1rem 0;
+}
+
+.book-seat-btn:hover:not(:disabled) {
+  background: #059669;
+}
+
+.book-seat-btn.fully-booked {
+  background: #ef4444;
+  cursor: not-allowed;
+}
+
+.book-seat-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.restaurant-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.status-indicator {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.status-indicator.open {
+  color: #059669;
+}
+
+.status-indicator.closed {
+  color: #dc2626;
+}
+
+.hours {
+  color: #6b7280;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 768px) {
+  .restaurant-card {
+    padding: 1rem;
+  }
+  
+  .restaurant-header {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .meal-availability {
+    grid-template-columns: 1fr;
+  }
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  background: #f9fafb;
+  border-radius: 6px;
+  font-weight: bold; /* Makes name and price bold */
+  color: #1f2937;
+}
+
+.add-to-cart-btn {
+  background-color: #e6e6fa; /* light lavender */
+  color: #4b0082;            /* deep purple */
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #d8bfd8; /* slightly darker lavender */
+} 

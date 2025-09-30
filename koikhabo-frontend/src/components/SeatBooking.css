@@ -1,0 +1,616 @@
+.seat-booking {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Inter', sans-serif;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking-header h2 {
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.booking-header p {
+  color: #666;
+  margin: 0;
+}
+
+.booking-form {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.seat-legend {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.legend-icon {
+  font-size: 1.2rem;
+}
+
+.seat-layout-grid {
+  margin: 2rem 0;
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+  border-radius: 16px;
+  padding: 2.5rem;
+  border: 2px solid #e1e5e9;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+}
+
+.seat-layout-grid::before {
+  content: "🍽️ Restaurant Floor Plan";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.seat-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1rem 1rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.05);
+  min-height: 400px;
+}
+
+.seat {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  font-size: 0.8rem;
+  text-align: center;
+  position: relative;
+  font-weight: 600;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+  margin: 0.5rem;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(240, 240, 240, 0.9));
+}
+
+.seat-icon {
+  font-size: 1.4rem;
+  margin-bottom: 0.3rem;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.2));
+}
+
+.seat-code {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.seat.available {
+  background: #e8f5e8;
+  border-color: #4CAF50;
+  color: #2E7D32;
+}
+
+.seat.available:hover {
+  background: #c8e6c9;
+  transform: scale(1.1);
+}
+
+.seat.selected {
+  background: #e3f2fd;
+  border-color: #2196F3;
+  color: #1565C0;
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+.seat.booked {
+  background: #fff3e0;
+  border-color: #FF9800;
+  color: #E65100;
+  cursor: not-allowed;
+}
+
+.seat.occupied {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #C62828;
+  cursor: not-allowed;
+}
+
+.seat.private-room {
+  border-width: 3px;
+  border-style: dashed;
+}
+
+.seat.private-room.available {
+  background: #f3e5f5;
+  border-color: #9C27B0;
+  color: #6A1B9A;
+}
+
+.seat.private-room.selected {
+  background: #e1bee7;
+  border-color: #7B1FA2;
+  color: #4A148C;
+}
+
+.seat.women-only {
+  border-width: 3px;
+  border-style: solid;
+}
+
+.seat.women-only.available {
+  background: #fce4ec;
+  border-color: #E91E63;
+  color: #AD1457;
+}
+
+.seat.women-only.selected {
+  background: #f8bbd9;
+  border-color: #C2185B;
+  color: #880E4F;
+}
+
+.seat.women-only.private-room {
+  border-style: dashed;
+}
+
+.seat.women-only.private-room.available {
+  background: linear-gradient(135deg, #fce4ec, #f3e5f5);
+  border-color: #AD1457;
+}
+
+.seat.women-only.private-room.selected {
+  background: linear-gradient(135deg, #f8bbd9, #e1bee7);
+  border-color: #880E4F;
+}
+
+.booking-summary {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.booking-summary h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.selected-seats {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.selected-seat-tag {
+  background: #e3f2fd;
+  color: #1565C0;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #2196F3;
+}
+
+.book-button {
+  width: 100%;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.book-button:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.book-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.restaurant-info {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.restaurant-info h3 {
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.info-label {
+  font-weight: 500;
+  color: #333;
+}
+
+.info-value {
+  color: #666;
+  font-weight: 500;
+}
+
+.seat-booking-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loading-spinner {
+  font-size: 3rem;
+  animation: spin 2s linear infinite;
+  margin-bottom: 1rem;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .seat-booking {
+    padding: 1rem;
+  }
+  
+  .seat-legend {
+    gap: 1rem;
+  }
+  
+  .legend-item {
+    font-size: 0.8rem;
+  }
+  
+  .seat {
+    width: 50px;
+    height: 50px;
+    font-size: 0.7rem;
+  }
+  
+  .seat-icon {
+    font-size: 1rem;
+  }
+  
+  .seat-code {
+    font-size: 0.6rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .selected-seats {
+    justify-content: center;
+  }
+}
+
+/* Enhanced Booking Features */
+.customer-form {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin: 1rem 0;
+}
+
+.customer-form h4 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.cost-breakdown {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  border: 2px solid #e1e5e9;
+}
+
+.cost-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.cost-item:last-child {
+  border-bottom: none;
+}
+
+.cost-total {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0 0 0;
+  border-top: 2px solid #e1e5e9;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.payment-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  border: 2px solid #667eea;
+}
+
+.payment-summary {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.payment-methods {
+  margin: 1.5rem 0;
+}
+
+.payment-methods h4 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border: 2px solid #e1e5e9;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-option:hover {
+  border-color: #667eea;
+}
+
+.payment-option input[type="radio"]:checked + span {
+  color: #667eea;
+  font-weight: 600;
+}
+
+.payment-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.cancel-btn,
+.confirm-payment-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+}
+
+.cancel-btn {
+  background: #f0f0f0;
+  color: #333;
+}
+
+.cancel-btn:hover {
+  background: #e0e0e0;
+}
+
+.confirm-payment-btn {
+  background: #4CAF50;
+  color: white;
+}
+
+.confirm-payment-btn:hover:not(:disabled) {
+  background: #45a049;
+}
+
+.confirm-payment-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.booking-confirmation {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 3px solid #4CAF50;
+  margin: 2rem 0;
+}
+
+.confirmation-icon {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.booking-confirmation h3 {
+  color: #4CAF50;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.booking-details {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.booking-code {
+  background: #4CAF50;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+.confirmation-instructions {
+  background: #e3f2fd;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  text-align: left;
+}
+
+.confirmation-instructions h4 {
+  margin: 0 0 1rem 0;
+  color: #1976D2;
+}
+
+.confirmation-instructions ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.confirmation-instructions li {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.new-booking-btn {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.new-booking-btn:hover {
+  background: #5a6fd8;
+}

@@ -1,0 +1,113 @@
+.food-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  max-width: 320px;
+}
+
+.food-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.food-image-placeholder {
+  height: 180px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.food-emoji {
+  font-size: 4rem;
+}
+
+.food-info {
+  padding: 20px;
+}
+
+.food-info h3 {
+  margin: 0 0 8px 0;
+  color: #2c3e50;
+  font-size: 1.3em;
+  font-weight: 600;
+}
+
+.description {
+  color: #7f8c8d;
+  font-size: 0.9em;
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
+.food-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.price {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.4em;
+}
+
+.category {
+  background: #ecf0f1;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  color: #34495e;
+  font-weight: 500;
+}
+
+.food-meta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.meal-type, .spice-level, .veg-badge {
+  font-size: 0.75em;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.meal-type {
+  background: #3498db;
+  color: white;
+  text-transform: capitalize;
+}
+
+.spice-level {
+  background: #f39c12;
+  color: white;
+}
+
+.veg-badge {
+  background: #27ae60;
+  color: white;
+}
+
+.add-to-cart {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1em;
+  transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}

@@ -1,0 +1,74 @@
+.error-boundary {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.error-content {
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.error-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.retry-btn, .continue-btn {
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.retry-btn {
+  background: #28a745;
+  color: white;
+}
+
+.continue-btn {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.retry-btn:hover, .continue-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.error-details {
+  text-align: left;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.error-details pre {
+  white-space: pre-wrap;
+  font-size: 0.8rem;
+  color: #ffeb3b;
+}
