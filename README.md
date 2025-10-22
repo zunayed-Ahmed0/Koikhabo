@@ -1,113 +1,105 @@
-Koikhabo? 🍽️
+# Koikhabo? 🍽️
 
-Koikhabo? is a web-based food recommendation system designed for university students built with React, Django, and SQLite. It helps users discover nearby restaurants, view menus, and get personalized recommendations based on their preferences. The platform aims to make decision-making easier when choosing where and what to eat.
+![Project Badge](https://img.shields.io/badge/status-active-brightgreen) ![React](https://img.shields.io/badge/React-17.0.2-blue) ![Django](https://img.shields.io/badge/Django-4.2-success) ![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
 
-Features
+**Koikhabo?** is a web-based food recommendation system designed for university students. It helps users discover nearby restaurants, view menus, and get personalized food recommendations based on their preferences. The platform is built for a smooth, responsive, and modern user experience on both mobile and desktop.
 
-Browse nearby restaurants based on the user’s current location.
+---
 
-View detailed information about each restaurant, including menu and reviews.
+## 🌟 Features
 
-Personalized food recommendations for students.
+- 📍 Discover nearby restaurants using your current location.
+- 🍔 View restaurant details, menus, and reviews.
+- 🎯 Get personalized food recommendations.
+- 🌙 Dark mode support for comfortable night browsing.
+- 📱 Fully responsive UI with smooth interactions.
 
-Responsive and modern UI for seamless experience on mobile and desktop.
+---
 
-Easy-to-use interface with smooth interactions and dark mode support.
+## 🛠️ Tech Stack
 
-Tech Stack
+- **Frontend:** React.js, HTML5, CSS3, JavaScript  
+- **Backend:** Django, Django REST Framework  
+- **Database:** SQLite  
+- **APIs:** Location-based services for nearby restaurants  
+- **Deployment:** Can be deployed on Vercel, Heroku, or any web server
 
-Frontend: React.js, HTML5, CSS3, JavaScript
+---
 
-Backend: Django, Django REST Framework
+## ⚡ Installation
 
-Database: SQLite
+### Prerequisites
 
-APIs: Location-based services for fetching nearby restaurants
+Ensure you have the following installed:
 
-Deployment: (Optional section if deployed on Vercel/Heroku)
+- Node.js & npm
+- Python 3.x
+- Django
+- SQLite (bundled with Django)
 
-Installation
-Prerequisites
+### Steps
 
-Make sure you have the following installed:
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/your-username/koikhabo.git
+   cd koikhabo
+Setup Backend:
 
-Node.js and npm
-
-Python 3.x
-
-Django
-
-SQLite (comes bundled with Django)
-
-Steps
-
-Clone the repository:
-
-git clone https://github.com/your-username/koikhabo.git
-cd koikhabo
-
-
-Set up the backend:
-
+bash
+Copy code
 cd backend
 python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+Setup Frontend:
 
-
-Set up the frontend:
-
+bash
+Copy code
 cd frontend
 npm install
 npm start
+Open your browser at http://localhost:3000 to access the app.
 
+🎯 Usage
+Allow location access to get recommendations based on nearby restaurants.
 
-Open your browser and navigate to http://localhost:3000 to view the app.
+Browse restaurant lists and click to view details, menus, and reviews.
 
-Usage
+Use filters to sort by cuisine, price, or rating (if implemented).
 
-Allow location access to get nearby restaurant recommendations.
+Save favorite restaurants for easy access.
 
-Browse through restaurant lists and click on a restaurant to see more details.
-
-Filter recommendations by cuisine, price, or rating (optional feature if implemented).
-
-Add favorite restaurants to easily access them later.
-
-Contributing
-
+🤝 Contributing
 We welcome contributions to improve Koikhabo?
 
 Fork the repository.
 
-Create a new branch:
+Create a branch:
 
+bash
+Copy code
 git checkout -b feature/your-feature-name
+Make changes and commit:
 
-
-Make your changes and commit:
-
+bash
+Copy code
 git commit -m "Add feature: description"
-
-
 Push to your branch:
 
+bash
+Copy code
 git push origin feature/your-feature-name
-
-
 Open a pull request.
 
-License
+📄 License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
-This project is licensed under the MIT License. See the LICENSE
- file for details.
-
-Contact
-
+📞 Contact
 Zunayed Ahmed
 
-Email: zunayed.a.ahmed20@gmail.com
+✉️ Email: zunayed.a.ahmed20@gmail.com
 
-LinkedIn: Zunayed Ahmed
+🔗 LinkedIn: Zunayed Ahmed
+
